@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+
+}
+
+
+body {
+    background-color: rgb(243, 230, 211);   
+}
+
+header {
+    background-color: rgb(1, 20, 36);
+    color: aliceblue;
+    display: flex;
+
+}
+
+.titulo {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    height: 3rem;
+    display: flex;
+    /* text-align: center; */
+    align-items: flex-start;
+    /* justify-content: left; */
+}   
+
+.navegador {
+    text-align: center;
+    /* justify-content: center; */
+}
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     font-size: xx-large ;  
+     align-items: center;
+     /* justify-content: space-between; */
+     text-align: center;
+     
+
+}
