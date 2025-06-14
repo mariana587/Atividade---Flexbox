@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mode Avenue - Euro Mobster</title>
+    <link rel="stylesheet" href="/estilo.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="logo">MODE AVENUE</h1>
+        <nav class="nav">
+            <a href="#comeco">Coleção</a>
+            <a href="#roupas">Sobre</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <img src="sab.avif" alt="foto Sabrina Carpenter" class="Sabrina">
+        
+
+        <section id="comeco" class="hero">
+            <div class="hero2">
+                <h2>EURO MOBSTER</h2>
+                <p>Poder, elegância e rebeldia fundidos à estética urbana e europeia dos anos 90/2000. Uma coleção que
+                    desafia regras e impõe respeito pelo estilo.</p>
+                <button>Explorar Agora →</button>
+            </div>
+        </section>
+
+        <section id="roupas" class="galeria">
+            <div class="card">
+                <img src="look 1.jfif" alt="Roupa 01 da nova coleção">
+                <div class="card-content">
+                    <h3>Terno Oversized + Shox</h3>
+                    <p>Silhueta poderosa com toque esportivo. Cinza carvão e Nike vintage.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="look 2.jfif" alt="Roupa 02 da nova coleção">
+                <div class="card-content">
+                    <h3>Trench Coat & Regata</h3>
+                    <p>Luxo decadente com sensualidade urbana. Preto total e prata.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="look 3.jfif" alt="Roupa 03 da nova coleção">
+                <div class="card-content">
+                    <h3>Conjunto Acetinado</h3>
+                    <p>Toque Y2K refinado com brilho sutil. Verde oliva com dourado.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="look 4.jfif" alt="Roupa 04 da nova coleção">
+                <div class="card-content">
+                    <h3>Cargo de Alfaiataria</h3>
+                    <p>Funcionalidade e estilo mafioso combinados em lã fria bege.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="look 5.jfif
+                " alt="Roupa 05 da nova coleção">
+                <div class="card-content">
+                    <h3>Mesh Techno + Óculos Slim</h3>
+                    <p>Sensualidade noturna de Berlim com acessórios imponentes.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="carousel-section">
+            <div class="carousel-container">
+                <div class="carousel" id="carousel">
+                    <img src="images/brand-1.jpg" alt="Marca 1">
+                    <img src="images/brand-2.jpg" alt="Marca 2">
+                    <img src="images/brand-3.jpg" alt="Marca 3">
+                    <img src="images/brand-4.jpg" alt="Marca 4">
+                </div>
+            </div>
+            <div class="carousel-buttons">
+                <button onclick="prevSlide()">&#10094;</button>
+                <button onclick="nextSlide()">&#10095;</button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        © 2025 Mode Avenue. Todos os direitos reservados.
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+        const carousel = document.getElementById('carousel');
+        const slides = carousel.children;
+        const totalSlides = slides.length;
+
+        function updateCarousel() {
+            for (let i = 0; i < totalSlides; i++) {
+                slides[i].classList.remove('active');
+                if (i === currentSlide) {
+                    slides[i].classList.add('active');
+                }
+            }
+            carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+
+        setInterval(nextSlide, 5000);
+        updateCarousel();
+    </script>
+</body>
+
+</html>
